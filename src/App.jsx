@@ -7,7 +7,7 @@ import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
 import ProjectDetail from './pages/ProjectDetail' 
 import EditProject from './pages/EditProject'
-//import CelebrationWall from './pages/CelebrationWall'
+import CelebrationWall from './pages/CelebrationWall'
 
 export default function App() {
   return (
@@ -38,9 +38,9 @@ export default function App() {
          <Route path="/project/:id/edit" element={
           <ProtectedRoute><EditProject /></ProtectedRoute>
         } />
-        {/* <Route path="/celebration-wall" element={
+         <Route path="/celebration-wall" element={
           <ProtectedRoute><CelebrationWall /></ProtectedRoute>
-        } /> */}
+        } /> 
       </Routes>
     </BrowserRouter>
   )
