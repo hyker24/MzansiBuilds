@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navbar from '../Components/Navbar'
+import Navbar from '../Components/NavBar'
 import ProjectCard from '../Components/ProjectCard'
 import { useProjects } from '../hooks/useProjects'
 

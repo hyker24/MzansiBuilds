@@ -67,7 +67,7 @@ vi.mock('../hooks/useProjects', () => ({
 
 // Mock the Navbar because it has its own dependencies
 // we don't want to set up in these tests
-vi.mock('../Components/Navbar', () => ({
+vi.mock('../Components/NavBar', () => ({
   default: () => <nav data-testid="navbar">Navbar</nav>
 }))
 
