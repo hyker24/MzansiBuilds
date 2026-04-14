@@ -3,8 +3,8 @@ import { useProfile } from '../hooks/useProfile'
 import { useAuth } from '../context/AuthContext'
 import { useProjects } from '../hooks/useProjects'
 import Navbar from '../Components/NavBar'
-import ProjectCard from '../components/ProjectCard'
-import CollaborationRequests from '../Components/CollaborationRequests'
+import ProjectCard from '../Components/ProjectCard'
+//import CollaborationRequests from '../Components/CollaborationRequests'
 
 export default function Profile() {
   const navigate = useNavigate()
