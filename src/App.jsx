@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Auth from './pages/Auth'
-//import Feed from './pages/Feed'
+import Feed from './pages/Feed'
 import ProtectedRoute from './Components/ProtectedRoute'
 //import CreateProject from './pages/CreateProject'
 //import Profile from './pages/Profile'
@@ -16,11 +16,11 @@ export default function App() {
         <Route path="/login" element={<Auth />} />
         <Route path="/register" element={<Auth />} />
         <Route path="/" element={<Navigate to="/login" replace />} />
-        {/* <Route path="/Feed" element={
+         <Route path="/Feed" element={
           <ProtectedRoute>
             <Feed />
           </ProtectedRoute>
-        } /> */}
+        } /> 
         {/* <Route path="/create-project" element={
           <ProtectedRoute>
             <CreateProject /> 
