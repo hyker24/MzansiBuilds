@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Auth from './pages/Auth'
-import Feed from './Pages/Feed'
+//import Feed from './Pages/Feed'
 import ProtectedRoute from './Components/ProtectedRoute'
-import CreateProject from './Pages/CreateProject'
-import Profile from './Pages/Profile'
-import EditProfile from './Pages/EditProfile'
-import ProjectDetail from './Pages/ProjectDetail' 
-import EditProject from './Pages/EditProject'
-import CelebrationWall from './Pages/CelebrationWall'
+//import CreateProject from './Pages/CreateProject'
+//import Profile from './Pages/Profile'
+//import EditProfile from './Pages/EditProfile'
+//import ProjectDetail from './Pages/ProjectDetail' 
+//import EditProject from './Pages/EditProject'
+//import CelebrationWall from './Pages/CelebrationWall'
 
 export default function App() {
   return (
@@ -16,33 +16,31 @@ export default function App() {
         <Route path="/login" element={<Auth />} />
         <Route path="/register" element={<Auth />} />
         <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/Feed" element={
+        {/* <Route path="/Feed" element={
           <ProtectedRoute>
             <Feed />
           </ProtectedRoute>
-        } />
-        <Route path="/create-project" element={
+        } /> */}
+        {/* <Route path="/create-project" element={
           <ProtectedRoute>
             <CreateProject /> 
           </ProtectedRoute>
-        } />
-      <Route path="/profile" element={
+        } /> */}
+        {/* <Route path="/profile" element={
           <ProtectedRoute><Profile /></ProtectedRoute>
-          } />
-      <Route path="/edit-profile" element={
+        } /> */}
+        {/* <Route path="/edit-profile" element={
           <ProtectedRoute><EditProfile /></ProtectedRoute>
-          } />
-      <Route path="/project/:id" element={
+        } /> */}
+        {/* <Route path="/project/:id" element={
           <ProtectedRoute><ProjectDetail /></ProtectedRoute>
-          } />
-      
-      <Route path="/project/:id/edit" element={
+        } /> */}
+        {/* <Route path="/project/:id/edit" element={
           <ProtectedRoute><EditProject /></ProtectedRoute>
-        } />
-      <Route path="/celebration-wall" element={
+        } /> */}
+        {/* <Route path="/celebration-wall" element={
           <ProtectedRoute><CelebrationWall /></ProtectedRoute>
-        } />
-      
+        } /> */}
       </Routes>
     </BrowserRouter>
   )
