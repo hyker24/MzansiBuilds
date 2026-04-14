@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Auth from './pages/Auth'
-//import Feed from './Pages/Feed'
+//import Feed from './pages/Feed'
 import ProtectedRoute from './Components/ProtectedRoute'
-//import CreateProject from './Pages/CreateProject'
-//import Profile from './Pages/Profile'
-//import EditProfile from './Pages/EditProfile'
-//import ProjectDetail from './Pages/ProjectDetail' 
-//import EditProject from './Pages/EditProject'
-//import CelebrationWall from './Pages/CelebrationWall'
+//import CreateProject from './pages/CreateProject'
+//import Profile from './pages/Profile'
+//import EditProfile from './pages/EditProfile'
+//import ProjectDetail from './pages/ProjectDetail' 
+//import EditProject from './pages/EditProject'
+//import CelebrationWall from './pages/CelebrationWall'
 
 export default function App() {
   return (
