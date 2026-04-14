@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 // MemoryRouter is needed because ProjectCard uses useNavigate
 // which requires a Router context
 import { MemoryRouter } from 'react-router-dom'
-//import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../Components/ProjectCard'
 
 // This is the fake project data we'll use across all tests
 // We define it once here so we don't repeat it
