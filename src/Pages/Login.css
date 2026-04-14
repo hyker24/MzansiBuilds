@@ -1,0 +1,357 @@
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fafaf8;
+  font-family: 'DM Sans', sans-serif;
+  color: #0d0d0d;
+  min-height: 100vh;
+}
+
+/* ─── Spinner animation ──────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Page wrapper ───────────────────────────────────────── */
+/* Every page gets this class on its outer div */
+.page {
+  min-height: 100vh;
+  background: #fafaf8;
+}
+
+/* ─── Content container ──────────────────────────────────── */
+/* Centers content and adds padding on all screen sizes */
+.content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.content-sm {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.content-md {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* On small phones reduce padding */
+@media (max-width: 480px) {
+  .content,
+  .content-sm,
+  .content-md {
+    padding: 20px 16px;
+  }
+}
+
+/* ─── Navbar ─────────────────────────────────────────────── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #3f3b3b;
+  border-bottom: 1px solid #e2e2de;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* On small screens hide the sign out text, show icon only */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-sign-out-text {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+}
+
+/* ─── Project grid ───────────────────────────────────────── */
+/* Two columns on desktop, one on mobile */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Auth page layout ───────────────────────────────────── */
+/* Side by side on desktop, stacked on mobile */
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-left {
+  flex: 1;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+}
+
+.auth-right {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+}
+
+/* On tablets and phones stack them vertically */
+@media (max-width: 768px) {
+  .auth-layout {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    padding: 40px 24px;
+    /* Don't take up too much vertical space on mobile */
+    min-height: auto;
+    flex: none;
+  }
+
+  .auth-right {
+    padding: 40px 24px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-left {
+    padding: 32px 20px;
+  }
+
+  .auth-right {
+    padding: 32px 20px;
+  }
+}
+
+/* ─── Hero section ───────────────────────────────────────── */
+.hero {
+  background: #0d0d0d;
+  padding: 32px 28px;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 24px 16px;
+  }
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border: 1px solid #e2e2de;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ─── Profile layout ─────────────────────────────────────── */
+/* Profile card — side by side on desktop, stacked on mobile */
+.profile-card-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .profile-card-inner {
+    flex-direction: column;
+  }
+}
+
+/* Stats row — equal width columns */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
+
+/* ─── Action row (like + collab buttons) ─────────────────── */
+.action-row {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .action-row {
+    flex-direction: column;
+  }
+}
+
+/* ─── Filter bar ─────────────────────────────────────────── */
+.filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ─── Form actions row ───────────────────────────────────── */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+/* ─── Celebration wall hero ──────────────────────────────── */
+.wall-hero {
+  background: #0d0d0d;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wall-hero {
+    padding: 36px 16px;
+  }
+}
+
+/* ─── Collaboration requests tabs ────────────────────────── */
+.collab-tabs {
+  display: flex;
+  border-bottom: 1px solid #e2e2de;
+  padding: 0 18px;
+  overflow-x: auto;
+  /* Hide scrollbar on mobile but keep scrollability */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.collab-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Avatar section in edit profile ─────────────────────── */
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .avatar-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+/* ─── Modal ──────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 16px;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 20px 16px;
+    /* On very small screens anchor to bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 16px 16px 0 0;
+    max-width: 100%;
+  }
+
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+}
+
+/* ─── Input and textarea full width on mobile ────────────── */
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 16px;
+    /* 16px prevents iOS from auto-zooming on input focus */
+  }
+}
+
+/* ─── Typography scaling ─────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 22px !important;
+  }
+
+  .page-heading {
+    font-size: 20px !important;
+  }
+}
