@@ -3,10 +3,10 @@ import Auth from './pages/Auth'
 import Feed from './pages/Feed'
 import ProtectedRoute from './Components/ProtectedRoute'
 import CreateProject from './pages/CreateProject'
-//import Profile from './pages/Profile'
-//import EditProfile from './pages/EditProfile'
-//import ProjectDetail from './pages/ProjectDetail' 
-//import EditProject from './pages/EditProject'
+import Profile from './pages/Profile'
+import EditProfile from './pages/EditProfile'
+import ProjectDetail from './pages/ProjectDetail' 
+import EditProject from './pages/EditProject'
 //import CelebrationWall from './pages/CelebrationWall'
 
 export default function App() {
@@ -26,18 +26,18 @@ export default function App() {
             <CreateProject /> 
           </ProtectedRoute>
         } /> 
-        {/* <Route path="/profile" element={
+        <Route path="/profile" element={
           <ProtectedRoute><Profile /></ProtectedRoute>
-        } /> */}
-        {/* <Route path="/edit-profile" element={
+        } /> 
+        <Route path="/edit-profile" element={
           <ProtectedRoute><EditProfile /></ProtectedRoute>
-        } /> */}
-        {/* <Route path="/project/:id" element={
+        } /> 
+         <Route path="/project/:id" element={
           <ProtectedRoute><ProjectDetail /></ProtectedRoute>
-        } /> */}
-        {/* <Route path="/project/:id/edit" element={
+        } /> 
+         <Route path="/project/:id/edit" element={
           <ProtectedRoute><EditProject /></ProtectedRoute>
-        } /> */}
+        } />
         {/* <Route path="/celebration-wall" element={
           <ProtectedRoute><CelebrationWall /></ProtectedRoute>
         } /> */}
