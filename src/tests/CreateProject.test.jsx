@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
-import CreateProject from '../Pages/CreateProject'
+import CreateProject from '../pages/CreateProject'
 
 const mockNavigate = vi.fn()
 vi.mock('react-router-dom', async () => {
