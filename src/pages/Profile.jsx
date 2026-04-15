@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext'
 import { useProjects } from '../hooks/useProjects'
 import Navbar from '../Components/NavBar'
 import ProjectCard from '../Components/ProjectCard'
-//import CollaborationRequests from '../Components/CollaborationRequests'
+import CollaborationRequests from '../Components/CollaborationRequests'
 
 export default function Profile() {
   const navigate = useNavigate()
